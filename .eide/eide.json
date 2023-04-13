@@ -6,7 +6,7 @@
     ".eide/deps",
     "Core",
     "Drivers",
-    "littlefs"
+    "Source/littlefs"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -56,7 +56,8 @@
           "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
           "Drivers/CMSIS/Include",
           ".eide/deps",
-          "littlefs"
+          "littlefs",
+          "Source/littlefs"
         ],
         "libList": [],
         "sourceDirList": [],

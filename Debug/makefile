@@ -9,8 +9,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include littlefs/bd/subdir.mk
--include littlefs/subdir.mk
+-include Source/littlefs/bd/subdir.mk
+-include Source/littlefs/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -62,8 +62,8 @@ all: main-build
 main-build: SAALRO-EVK.elf secondary-outputs
 
 # Tool invocations
-SAALRO-EVK.elf SAALRO-EVK.map: $(OBJS) $(USER_OBJS) /home/freire/Projects/ST-Workspace/SAALRO-EVK/STM32F429BITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SAALRO-EVK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/freire/Projects/ST-Workspace/SAALRO-EVK/STM32F429BITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAALRO-EVK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SAALRO-EVK.elf SAALRO-EVK.map: $(OBJS) $(USER_OBJS) D:\Files\Personal\SAALRO-EVK\STM32F429BITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "SAALRO-EVK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Files\Personal\SAALRO-EVK\STM32F429BITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAALRO-EVK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
