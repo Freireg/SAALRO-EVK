@@ -1,0 +1,66 @@
+!!! Warning !!!
+
+There are some incompatible arguments between 'eclipse' and 'eide', you need check and add them to eide project manually !
+
+When you have solved these incompatible problems, you need delete this note file, otherwise this file will be show again !
+
+---
+
+##### Configurations For All Targets #####
+
+//
+///// Target: 'Debug' /////
+//
+
+Incompatible Args:
+    /:
+        globalArgs:
+            - <MCU> = STM32F429BITx
+            - <CPU> = 0
+            - <Core> = 0
+            - <Floating-point unit> = com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.value.fpv4-sp-d16
+            - <Floating-point ABI> = com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.value.hard
+            - <Board> = genericBoard
+            - "<Defaults> = com.st.stm32cube.ide.common.services.build.inputs.revA.1.0.5 || Debug || true || Executable || com.st.stm32cube.ide.mcu.gnu.managedbuild.option.toolchain.value.workspace || STM32F429BITx || 0 || 0 || arm-none-eabi- || ${gnu_tools_for_stm32_compiler_path} || ../Core/Inc | ../Drivers/STM32F4xx_HAL_Driver/Inc | ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy | ../Drivers/CMSIS/Device/ST/STM32F4xx/Include | ../Drivers/CMSIS/Include ||  ||  || USE_HAL_DRIVER | STM32F429xx ||  || Drivers | Core/Startup | Core ||  ||  || ${workspace_loc:/${ProjName}/STM32F429BITX_FLASH.ld} || true || NonSecure ||  || secure_nsclib.o ||  || None || "
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Debug level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.debuglevel.value.g3
+            - <Optimization level> = undefined
+            - <Debug level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.value.g3
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs:
+            - <Debug level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.debuglevel.value.g3
+        linkerArgs: []
+        linkerLibArgs: []
+
+
+//
+///// Target: 'Release' /////
+//
+
+Incompatible Args:
+    /:
+        globalArgs:
+            - <MCU> = STM32F429BITx
+            - <CPU> = 0
+            - <Core> = 0
+            - <Floating-point unit> = com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.value.fpv4-sp-d16
+            - <Floating-point ABI> = com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.value.hard
+            - <Board> = genericBoard
+            - "<Defaults> = com.st.stm32cube.ide.common.services.build.inputs.revA.1.0.5 || Release || false || Executable || com.st.stm32cube.ide.mcu.gnu.managedbuild.option.toolchain.value.workspace || STM32F429BITx || 0 || 0 || arm-none-eabi- || ${gnu_tools_for_stm32_compiler_path} || ../Core/Inc | ../Drivers/STM32F4xx_HAL_Driver/Inc | ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy | ../Drivers/CMSIS/Device/ST/STM32F4xx/Include | ../Drivers/CMSIS/Include ||  ||  || USE_HAL_DRIVER | STM32F429xx ||  || Drivers | Core/Startup | Core ||  ||  || ${workspace_loc:/${ProjName}/STM32F429BITX_FLASH.ld} || true || NonSecure ||  || secure_nsclib.o ||  || None || "
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Debug level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.debuglevel.value.g0
+            - <Optimization level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.optimization.level.value.os
+            - <Debug level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.value.g0
+            - <Optimization level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.value.os
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs:
+            - <Debug level> = com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.debuglevel.value.g0
+        linkerArgs: []
+        linkerLibArgs: []
+
